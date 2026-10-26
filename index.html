@@ -569,7 +569,7 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     fr: "Vente — calculateur de vente pour votre habitation | JPHsystems",
     en: "Verkoop — home sale calculator | JPHsystems"
   };
-  function setLang(l) {
+  function setLang(l, save) {
     document.documentElement.lang = l;
     document.title = titles[l];
     document.querySelectorAll("[data-lang]").forEach(function (el) {
@@ -581,18 +581,15 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     document.querySelectorAll("nav.langs button").forEach(function (b) {
       b.setAttribute("aria-current", b.getAttribute("data-lang") === l ? "true" : "false");
     });
-    try { localStorage.setItem("verkoop-lang", l); } catch (e) {}
+    if (save) { try { localStorage.setItem("verkoop-lang-v2", l); } catch (e) {} }
   }
   document.querySelectorAll("nav.langs button").forEach(function (b) {
-    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang")); window.scrollTo({ top: 0 }); });
+    b.addEventListener("click", function () { setLang(b.getAttribute("data-lang"), true); window.scrollTo({ top: 0 }); });
   });
+  // Standaard Nederlands; enkel een expliciet gekozen taal (v2) wordt onthouden.
   var saved = null;
-  try { saved = localStorage.getItem("verkoop-lang"); } catch (e) {}
-  if (!saved && navigator.language) {
-    var pref = navigator.language.slice(0, 2);
-    if (pref === "fr" || pref === "en" || pref === "nl") saved = pref;
-  }
-  if (saved && saved !== "nl") setLang(saved);
+  try { saved = localStorage.getItem("verkoop-lang-v2"); } catch (e) {}
+  if (saved === "fr" || saved === "en") setLang(saved, false);
 })();
 </script>
 </body>
