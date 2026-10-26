@@ -212,7 +212,7 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <tr><td>Bescheiden woning (≤ € 220.000; kernsteden € 240.000)</td><td>extra korting <b>€ 1.867</b></td></tr>
       <tr><td>Geen verlaagd tarief (o.a. tweede woning)</td><td>12 %</td></tr>
     </table>
-    <div class="strip">Restbedrag = netto-opbrengst − aankoopprijs − registratiekosten — groen als je overhoudt, rood als je bijleent.</div>
+    <div class="strip">Restbedrag = netto-opbrengst − aankoopprijs − registratie- en notariskosten — groen als je overhoudt, rood als je bijleent.</div>
     <p class="muted" style="margin-top:12px;font-size:.92rem">Overgangsregeling: wie vóór 01/01/2027 een compromis ondertekent, behoudt volgens VLABEL (standpunt 26021) het tarief van 2 %.</p>
     <h2 style="margin-top:34px;font-size:1.3rem">Zo wordt het berekend</h2>
     <table>
@@ -221,8 +221,9 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <tr><td>Registratie 2027</td><td>aankoopprijs × 3 %</td><td>€ 425.000 × 3 % = <b>€ 12.750</b> (+€ 4.250)</td></tr>
       <tr><td>Bescheiden woning</td><td>(aankoopprijs × tarief) − € 1.867</td><td>€ 200.000 × 2 % − € 1.867 = <b>€ 2.133</b></td></tr>
       <tr><td>Niet-enige woning</td><td>aankoopprijs × 12 %</td><td>€ 300.000 × 12 % = <b>€ 36.000</b></td></tr>
+      <tr><td>Notariskosten</td><td>ereloon (schaal notaris.be) + vaste kosten € 1.649 + btw 21 %</td><td>€ 2.697 + € 1.649 + € 832 = <b>€ 5.177</b></td></tr>
       <tr><td>Verkoop</td><td>prijs − courtage − btw 21 %</td><td>€ 395.000 − € 11.850 − € 2.488 = <b>€ 380.662</b></td></tr>
-      <tr><td>Restbedrag</td><td>netto − aankoop − registratie</td><td>€ 380.662 − € 425.000 − € 8.500 = <b>−€ 52.838</b></td></tr>
+      <tr><td>Restbedrag</td><td>netto − aankoop − registratie − notaris</td><td>€ 380.662 − € 425.000 − € 8.500 − € 5.177 ≈ <b>−€ 58.016</b></td></tr>
     </table>
     <p class="muted" style="margin-top:10px;font-size:.9rem">Bronnen: <a href="https://www.notaris.be" target="_blank" rel="noopener">notaris.be</a> · <a href="https://www.vlaanderen.be/wonen" target="_blank" rel="noopener">vlaanderen.be</a> · <a href="https://www.vlabel.be" target="_blank" rel="noopener">vlabel.be</a> (standpunt 26021) · <a href="https://fiscus.fgov.be" target="_blank" rel="noopener">fiscus.fgov.be</a></p>
   </div>
@@ -262,7 +263,7 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <p class="kicker">FAQ</p>
     <h2>Veelgestelde vragen</h2>
     <details><summary>Wijzigt het tarief echt in 2027?</summary><p>De Vlaamse Regering kondigde in de Septemberverklaring 2026 aan dat het verlaagde verkooprecht voor de enige eigen woning stijgt van 2 % naar 3 % vanaf 1 januari 2027. De app houdt hiermee rekening en toont beide regelingen. Controleer voor je tekent altijd de actuele stand bij je notaris.</p></details>
-    <details><summary>Zit de notarisfee erin?</summary><p>De app berekent de registratiebelasting (verkooprecht). Het ereloon van de notaris en bijkomende kosten zijn niet inbegrepen; vraag er een overzicht bij je notaris.</p></details>
+    <details><summary>Zit de notarisfee erin?</summary><p>Ja: de app berekent het ereloon, de vaste kosten (€ 1.649) en de btw 21 % volgens de officiële schaal van notaris.be (stand 2026). Hypotheekkosten en dossierkosten op maat zitten er niet in; vraag er een overzicht bij je notaris.</p></details>
     <details><summary>Is dit fiscaal advies?</summary><p>Nee — de berekening is indicatief en houdt geen rekening met je persoonlijke situatie (aflossingsboetes, renovatieverplichtingen, …).</p></details>
     <details><summary>Hoe werkt de knop Voorbeeldgegevens?</summary><p>Hij vult voorbeeldcijfers in zodat je de app meteen kunt uitproberen. Met de ronde pijltjes naast elke sectie reset je alles.</p></details>
     <details><summary>Vragen of probleem?</summary><p>Meld het via <a href="https://github.com/jphermans/Verkoop-Support/issues">GitHub Issues</a>.</p></details>
@@ -332,7 +333,7 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <tr><td>Habitation modeste (≤ 220 000 € ; villes-centres 240 000 €)</td><td>réduction supplémentaire de <b>1 867 €</b></td></tr>
       <tr><td>Sans taux réduit (notamment deuxième habitation)</td><td>12 %</td></tr>
     </table>
-    <div class="strip">Solde = produit net − prix d'achat − frais d'enregistrement — en vert s'il vous reste, en rouge si vous empruntez davantage.</div>
+    <div class="strip">Solde = produit net − prix d'achat − droits d'enregistrement et frais de notaire — en vert s'il vous reste, en rouge si vous empruntez davantage.</div>
     <p class="muted" style="margin-top:12px;font-size:.92rem">Régime transitoire : selon VLABEL (position 26021), un compromis signé avant le 01/01/2027 conserve le taux de 2 %.</p>
     <h2 style="margin-top:34px;font-size:1.3rem">Comment le calcul est fait</h2>
     <table>
@@ -341,8 +342,9 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <tr><td>Enregistrement 2027</td><td>prix d'achat × 3 %</td><td>425 000 € × 3 % = <b>12 750 €</b> (+4 250 €)</td></tr>
       <tr><td>Habitation modeste</td><td>(prix d'achat × taux) − 1 867 €</td><td>200 000 € × 2 % − 1 867 € = <b>2 133 €</b></td></tr>
       <tr><td>Habitation non unique</td><td>prix d'achat × 12 %</td><td>300 000 € × 12 % = <b>36 000 €</b></td></tr>
+      <tr><td>Frais de notaire</td><td>honoraires (barème notaris.be) + frais fixes 1 649 € + TVA 21 %</td><td>2 697 € + 1 649 € + 832 € = <b>5 177 €</b></td></tr>
       <tr><td>Vente</td><td>prix − commission − TVA 21 %</td><td>395 000 € − 11 850 € − 2 488 € = <b>380 662 €</b></td></tr>
-      <tr><td>Solde</td><td>net − achat − enregistrement</td><td>380 662 € − 425 000 € − 8 500 € = <b>−52 838 €</b></td></tr>
+      <tr><td>Solde</td><td>net − achat − enregistrement − notaire</td><td>380 662 € − 425 000 € − 8 500 € − 5 177 € ≈ <b>−58 016 €</b></td></tr>
     </table>
     <p class="muted" style="margin-top:10px;font-size:.9rem">Sources : <a href="https://www.notaris.be" target="_blank" rel="noopener">notaris.be</a> · <a href="https://www.vlaanderen.be/wonen" target="_blank" rel="noopener">vlaanderen.be</a> · <a href="https://www.vlabel.be" target="_blank" rel="noopener">vlabel.be</a> (position 26021) · <a href="https://fiscus.fgov.be" target="_blank" rel="noopener">fiscus.fgov.be</a></p>
   </div>
@@ -382,7 +384,7 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <p class="kicker">FAQ</p>
     <h2>Questions fréquentes</h2>
     <details><summary>Le taux change-t-il vraiment en 2027&nbsp;?</summary><p>Le gouvernement flamand a annoncé, dans la déclaration de septembre 2026, que le droit réduit pour l'habitation propre et unique passe de 2 % à 3 % au 1er janvier 2027. L'app en tient compte et affiche les deux régimes. Vérifiez toujours la situation actuelle auprès de votre notaire avant de signer.</p></details>
-    <details><summary>Les honoraires du notaire sont-ils inclus&nbsp;?</summary><p>L'app calcule les droits d'enregistrement. Les honoraires du notaire et les frais annexes ne sont pas compris ; demandez un aperçu à votre notaire.</p></details>
+    <details><summary>Les honoraires du notaire sont-ils inclus&nbsp;?</summary><p>Oui : l'app calcule les honoraires, les frais fixes (1 649 €) et la TVA de 21 % selon le barème officiel de notaris.be (2026). Les frais d'hypothèque ne sont pas compris ; demandez un aperçu à votre notaire.</p></details>
     <details><summary>Est-ce un conseil fiscal&nbsp;?</summary><p>Non — le calcul est indicatif et ne tient pas compte de votre situation personnelle.</p></details>
     <details><summary>Comment fonctionne le bouton Données d'exemple&nbsp;?</summary><p>Il remplit des chiffres d'exemple pour explorer l'app immédiatement. Les petites flèches circulaires réinitialisent chaque section.</p></details>
     <details><summary>Une question ou un problème&nbsp;?</summary><p>Signalez-le via <a href="https://github.com/jphermans/Verkoop-Support/issues">GitHub Issues</a>.</p></details>
@@ -452,7 +454,7 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <tr><td>Modest dwelling (≤ €220,000; core cities €240,000)</td><td>extra <b>€1,867</b> reduction</td></tr>
       <tr><td>No reduced rate (e.g. second home)</td><td>12%</td></tr>
     </table>
-    <div class="strip">Balance = net proceeds − purchase price − registration costs — green if you keep money, red if you borrow more.</div>
+    <div class="strip">Balance = net proceeds − purchase price − registration and notary costs — green if you keep money, red if you borrow more.</div>
     <p class="muted" style="margin-top:12px;font-size:.92rem">Transition rule: per VLABEL (standpoint 26021), a compromise signed before 01/01/2027 keeps the 2% rate.</p>
     <h2 style="margin-top:34px;font-size:1.3rem">How the calculation works</h2>
     <table>
@@ -461,8 +463,9 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
       <tr><td>Registration 2027</td><td>purchase price × 3%</td><td>€425,000 × 3% = <b>€12,750</b> (+€4,250)</td></tr>
       <tr><td>Modest dwelling</td><td>(purchase price × rate) − €1,867</td><td>€200,000 × 2% − €1,867 = <b>€2,133</b></td></tr>
       <tr><td>Not an only own home</td><td>purchase price × 12%</td><td>€300,000 × 12% = <b>€36,000</b></td></tr>
+      <tr><td>Notary costs</td><td>fee (notaris.be scale) + fixed costs €1,649 + 21% VAT</td><td>€2,697 + €1,649 + €832 = <b>€5,177</b></td></tr>
       <tr><td>Sale</td><td>price − commission − 21% VAT</td><td>€395,000 − €11,850 − €2,488 = <b>€380,662</b></td></tr>
-      <tr><td>Balance</td><td>net − purchase − registration</td><td>€380,662 − €425,000 − €8,500 = <b>−€52,838</b></td></tr>
+      <tr><td>Balance</td><td>net − purchase − registration − notary</td><td>€380,662 − €425,000 − €8,500 − €5,177 ≈ <b>−€58,016</b></td></tr>
     </table>
     <p class="muted" style="margin-top:10px;font-size:.9rem">Sources: <a href="https://www.notaris.be" target="_blank" rel="noopener">notaris.be</a> · <a href="https://www.vlaanderen.be/wonen" target="_blank" rel="noopener">vlaanderen.be</a> · <a href="https://www.vlabel.be" target="_blank" rel="noopener">vlabel.be</a> (standpoint 26021) · <a href="https://fiscus.fgov.be" target="_blank" rel="noopener">fiscus.fgov.be</a></p>
   </div>
@@ -502,7 +505,7 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
     <p class="kicker">FAQ</p>
     <h2>Frequently asked questions</h2>
     <details><summary>Does the rate really change in 2027?</summary><p>In its September 2026 policy statement the Flemish Government announced that the reduced duty for your only own home rises from 2% to 3% on 1 January 2027. The app accounts for this and shows both schemes. Always check the current state with your notary before signing.</p></details>
-    <details><summary>Are notary fees included?</summary><p>The app calculates registration duty. The notary's fee and related costs are not included; ask your notary for an overview.</p></details>
+    <details><summary>Are notary fees included?</summary><p>Yes: the app calculates the notary fee, fixed costs (€1,649) and 21% VAT using the official notaris.be scale (2026). Mortgage costs are not included; ask your notary for an overview.</p></details>
     <details><summary>Is this tax advice?</summary><p>No — the calculation is indicative and ignores your personal situation.</p></details>
     <details><summary>How does the Sample data button work?</summary><p>It fills in example figures so you can try the app right away. The round arrows next to each section reset everything.</p></details>
     <details><summary>Question or problem?</summary><p>Report it via <a href="https://github.com/jphermans/Verkoop-Support/issues">GitHub Issues</a>.</p></details>
@@ -537,12 +540,15 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   <div class="shell">
     <p class="kicker">Changelog</p>
     <div class="changelog">
+      <p class="lang-nl"><b>1.9.0</b> — Notariskosten bij aankoop volgens de officiële schaal van notaris.be: ereloon, vaste kosten en btw 21 %, verwerkt in restbedrag, rapport en rekenvoorbeelden.</p>
       <p class="lang-nl"><b>1.8.0</b> — Nieuwe naam: Woonst Verkoop.</p>
       <p class="lang-nl"><b>1.7.0</b> — Tikbare bronlinks (notaris.be, vlaanderen.be, vlabel.be, fiscus.fgov.be) in Over, rekenvoorbeelden met alle formules in Hulp, willekeurige voorbeeldgegevens.</p>
       <p class="lang-nl"><b>1.6.0</b> — Kies je eigen accentkleur (8 paletten) en invoervelden volledig leegmaakbaar.</p>
+      <p class="lang-fr hidden"><b>1.9.0</b> — Frais de notaire selon le barème officiel de notaris.be : honoraires, frais fixes et TVA 21 %, intégrés au solde, au rapport et aux exemples.</p>
       <p class="lang-fr hidden"><b>1.8.0</b> — Nouveau nom : Woonst Verkoop.</p>
       <p class="lang-fr hidden"><b>1.7.0</b> — Sources cliquables (notaris.be, vlaanderen.be, vlabel.be, fiscus.fgov.be), exemples de calcul avec toutes les formules, données d’exemple aléatoires.</p>
       <p class="lang-fr hidden"><b>1.6.0</b> — Choisissez votre couleur d'accent (8 palettes) et champs de saisie entièrement effaçables.</p>
+      <p class="lang-en hidden"><b>1.9.0</b> — Notary costs per the official notaris.be scale: fee, fixed costs and 21% VAT, included in the balance, report and worked examples.</p>
       <p class="lang-en hidden"><b>1.8.0</b> — New name: Woonst Verkoop.</p>
       <p class="lang-en hidden"><b>1.7.0</b> — Tappable source links (notaris.be, vlaanderen.be, vlabel.be, fiscus.fgov.be), worked examples with every formula, random sample data.</p>
       <p class="lang-en hidden"><b>1.6.0</b> — Pick your own accent colour (8 palettes) and fully clearable input fields.</p>
