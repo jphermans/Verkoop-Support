@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verkoop — verkoopcalculator voor je woning | JPHsystems</title>
+<meta name="description" content="Verkoop berekent wat er overblijft na de verkoop van je woning en wat registratiekosten bij aankoop kosten volgens de Vlaamse regeling: 2% in 2026, 3% vanaf 2027. NL/FR/EN, iPhone en iPad, geen tracking.">
+<meta name="theme-color" content="#EBF0F7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#11171F" media="(prefers-color-scheme: dark)">
+<style>
+:root{
+  --bg-light:#EBF0F7; --bg-dark:#11171F; --card-light:#F8FBFD; --card-dark:#1A2330;
+  --ink:#1C2733; --ink-2:#5A6B7C; --gold:#B08A3E; --gold-2:#D8B25E; --line:#D3DDE8;
+  --green:#2E7D46; --max:880px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font:-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;
+  background:var(--bg-light);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+@media (prefers-color-scheme:dark){body{background:var(--bg-dark);color:#E8EDF4}
+  .card{background:var(--card-dark)!important}.muted{color:#9AA7B5!important}
+  a{color:var(--gold-2)}.flagline{border-color:#2A3546!important}}
+.shell{max-width:var(--max);margin:0 auto;padding:0 20px}
+header.site{padding:28px 0 8px}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.35rem}
+.brand svg{flex:0 0 auto}
+.brand small{display:block;font-weight:500;font-size:.8rem;color:var(--ink-2)}
+nav.langs{margin:14px 0 0;font-size:.9rem}
+nav.langs a{margin-right:14px}
+main{padding:12px 0 40px}
+section{margin:26px 0}
+h1{font-size:2rem;line-height:1.25;margin-bottom:10px}
+h2{font-size:1.3rem;margin-bottom:12px}
+h2 .num{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;
+  border-radius:50%;background:rgba(176,138,62,.15);color:var(--gold);font-size:.95rem;margin-right:8px}
+p{margin-bottom:10px}
+.muted{color:var(--ink-2)}
+.card{background:var(--card-light);border-radius:18px;padding:22px;box-shadow:0 1px 3px rgba(28,39,51,.08)}
+ul{margin:0 0 10px 20px}
+li{margin-bottom:6px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.badge{display:inline-block;background:rgba(176,138,62,.14);color:var(--gold);
+  border-radius:999px;padding:2px 12px;font-size:.85rem;font-weight:600;margin:0 6px 6px 0}
+.result{font-size:1.05rem;font-weight:700;color:var(--green)}
+a{color:var(--gold);text-decoration:none}
+a:hover{text-decoration:underline}
+footer.flagline{border-top:1px solid var(--line);margin-top:34px;padding:18px 0 30px;
+  font-size:.85rem;color:var(--ink-2)}
+footer .flag{display:inline-block;vertical-align:-2px;margin-right:8px}
+table{width:100%;border-collapse:collapse;margin-bottom:12px}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);font-size:.95rem}
+th{font-weight:700}
+kbd{background:rgba(176,138,62,.14);border-radius:6px;padding:1px 8px;font-family:inherit;color:var(--gold);font-weight:600}
+</style>
+</head>
+<body id="top">
+<div class="shell">
+
+<header class="site">
+  <div class="brand">
+    <svg width="44" height="44" viewBox="0 0 44 44" aria-hidden="true">
+      <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#E8C77A"/><stop offset="1" stop-color="#B08A3E"/></linearGradient></defs>
+      <rect width="44" height="44" rx="10" fill="url(#g)"/>
+      <path d="M22 10 L35 21 L35 22 L31 22 L31 33 L13 33 L13 22 L9 22 Z" fill="#151D28"/>
+      <rect x="19.5" y="25" width="5" height="8" rx="1.5" fill="url(#g)"/>
+    </svg>
+    <div>Verkoop<small>door JPHsystems — met trots uit België <span aria-hidden="true">🇧🇪</span></small></div>
+  </div>
+  <nav class="langs" aria-label="Taal / Langue / Language">
+    <a href="#nl">Nederlands</a>·<a href="#fr" style="margin-left:14px">Français</a>·<a href="#en" style="margin-left:14px">English</a>·<a href="#privacy" style="margin-left:14px">Privacy</a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ======================= NL ======================= -->
+<section id="nl">
+<h1>Wat blijft er over na verkoop én aankoop?</h1>
+<p class="muted">Verkoop rekent in twee stappen uit wat je woning verkoop opbrengt en wat een nieuwe woning kost — volgens de <strong>Vlaamse regeling</strong> voor registratiebelasting.</p>
+
+<div class="card" style="margin-top:14px">
+  <h2><span class="num">1</span>Verkoop van je woning</h2>
+  <ul>
+    <li>Vul de <strong>verkoopprijs</strong> in</li>
+    <li>Stel de <strong>makelaarscourtage</strong> in (0–5 %)</li>
+    <li>21 % <strong>btw</strong> op de courtage, naar keuze aan of uit</li>
+    <li>De app toont de totale verkoopkosten en je <strong>netto-opbrengst</strong></li>
+  </ul>
+</div>
+
+<div class="card" style="margin-top:14px">
+  <h2><span class="num">2</span>Aankoop nieuwe woning</h2>
+  <table>
+    <tr><th>Situatie</th><th>Verkooprecht</th></tr>
+    <tr><td>Enige eigen woning — regeling 2026</td><td><strong>2 %</strong></td></tr>
+    <tr><td>Enige eigen woning — vanaf 01/01/2027</td><td><strong>3 %</strong></td></tr>
+    <tr><td>Bescheiden woning (≤ € 220.000; kernsteden € 240.000)</td><td>extra korting <strong>€ 1.867</strong></td></tr>
+    <tr><td>Geen verlaagd tarief (o.a. tweede woning)</td><td>12 %</td></tr>
+  </table>
+  <p class="muted">De app toont beide regelingen naast elkaar, inclusief het verschil. Overgangsregeling: wie vóór 01/01/2027 een compromis ondertekent, behoudt volgens VLABEL (standpunt 26021) het tarief van 2 %.</p>
+</div>
+
+<div class="card" style="margin-top:14px">
+  <h2>Restbedrag</h2>
+  <p class="result">Netto-opbrengst − aankoopprijs − registratiekosten</p>
+  <p class="muted">Groen: wat je overhoudt. Rood: wat je erbij moet lenen. Met één tik deel je een kleurrijk rapport met grafieken via Berichten, Mail, WhatsApp — of je bewaart het als afbeelding.</p>
+</div>
+
+<div class="grid" style="margin-top:14px">
+  <div class="card"><h2 style="font-size:1.05rem">🌍 Overal thuis</h2><p class="muted" style="font-size:.95rem">iPhone, iPad en iPhone Duo, staand en liggend, automatisch licht en donker. Je invoer blijft bewaard.</p></div>
+  <div class="card"><h2 style="font-size:1.05rem">🗣️ Drie talen</h2><p class="muted" style="font-size:.95rem">Nederlands, Français en English — in de app wissel je meteen, zonder herstart.</p></div>
+  <div class="card"><h2 style="font-size:1.05rem">🔒 Privé</h2><p class="muted" style="font-size:.95rem">Alles blijft op je toestel. Geen accounts, geen reclame, geen tracking.</p></div>
+</div>
+
+<div class="card" style="margin-top:14px">
+  <h2>Veelgestelde vragen</h2>
+  <p><strong>Wijzigt het tarief echt in 2027?</strong><br>
+  De Vlaamse Regering kondigde in de Septemberverklaring 2026 aan dat het verlaagde verkooprecht voor de enige eigen woning stijgt van 2 % naar 3 % vanaf 1 januari 2027. De app houdt hiermee rekening en toont beide regelingen. Controleer voor je tekent altijd de actuele stand bij je notaris.</p>
+  <p><strong>Zit de notarisfee erin?</strong><br>
+  De app berekent de registratiebelasting (verkooprecht). Het ereloon van de notaris en bijkomende kosten zijn niet inbegrepen; vraag er een overzicht bij je notaris.</p>
+  <p><strong>Is dit fiscaal advies?</strong><br>
+  Nee — de berekening is indicatief en houdt geen rekening met je persoonlijke situatie (aflossingsboetes, renovatieverplichtingen, …).</p>
+  <p><strong>Hoe werkt de knop Voorbeeldgegevens?</strong><br>
+  Hij vult voorbeeldcijfers in zodat je de app meteen kunt uitproberen. Met de ronde pijltjes naast elke sectie reset je alles.</p>
+  <p><strong>Vragen of probleem?</strong><br>
+  Meld het via <a href="https://github.com/jphermans/Verkoop-Support/issues">GitHub Issues</a>.</p>
+</div>
+</section>
+
+<!-- ======================= FR ======================= -->
+<section id="fr">
+<h1>Que reste-t-il après la vente et l'achat ?</h1>
+<p class="muted"><strong>Vente</strong> calcule en deux étapes ce que rapporte la vente de votre habitation et ce que coûte l'achat d'un nouveau logement, selon la réglementation flamande des droits d'enregistrement.</p>
+<div class="card" style="margin-top:14px">
+  <h2>Comment ça marche</h2>
+  <ul>
+    <li>Prix de vente + commission de l'agent immobilier (0–5 %) + TVA de 21 % → produit net de la vente.</li>
+    <li>Prix d'achat du nouveau logement → droits d'enregistrement : <strong>2 %</strong> (régime 2026) ou <strong>3 %</strong> (à partir du 01/01/2027) pour l'habitation propre et unique ; réduction de <strong>1 867 €</strong> pour les habitations modestes (≤ 220 000 €) ; 12 % sinon.</li>
+    <li>L'app affiche les deux régimes côte à côte, différence comprise. Selon VLABEL (position 26021), un compromis signé avant le 01/01/2027 conserve le taux de 2 %.</li>
+    <li>Solde final, en vert ou en rouge, avec un rapport coloré à partager en un geste.</li>
+  </ul>
+  <p class="muted">Disponible en néerlandais, français et anglais — changement immédiat dans l'app. iPhone, iPad et iPhone Duo, mode clair et sombre. Calcul indicatif, pas un conseil fiscal. Questions : <a href="https://github.com/jphermans/Verkoop-Support/issues">GitHub Issues</a>.</p>
+</div>
+</section>
+
+<!-- ======================= EN ======================= -->
+<section id="en">
+<h1>What's left after selling and buying?</h1>
+<p class="muted"><strong>Verkoop</strong> works out in two steps what your home sale nets you and what buying a new home costs, following the Flemish registration-duty rules.</p>
+<div class="card" style="margin-top:14px">
+  <h2>How it works</h2>
+  <ul>
+    <li>Sale price + estate agent commission (0–5%) + 21% VAT → net sale proceeds.</li>
+    <li>New home purchase price → registration duty: <strong>2%</strong> (2026 scheme) or <strong>3%</strong> (from 01/01/2027) for your only own home; extra <strong>€1,867</strong> reduction for modest dwellings (≤ €220,000); 12% otherwise.</li>
+    <li>Both schemes shown side by side, difference included. Per VLABEL (standpoint 26021), a compromise signed before 01/01/2027 keeps the 2% rate.</li>
+    <li>Final balance in green or red, with a colourful report you can share in one tap.</li>
+  </ul>
+  <p class="muted">Dutch, French and English — switch instantly inside the app. iPhone, iPad and iPhone Duo, light and dark mode. Indicative calculation, not tax advice. Questions: <a href="https://github.com/jphermans/Verkoop-Support/issues">GitHub Issues</a>.</p>
+</div>
+</section>
+
+<!-- ======================= PRIVACY ======================= -->
+<section id="privacy">
+<div class="card">
+  <h2>🔒 Privacy / Confidentialité / Privacy</h2>
+  <p><em>Laatst bijgewericht / Dernière mise à jour / Last updated: 26 oktober 2026</em></p>
+
+  <h3 style="margin-top:14px">Nederlands</h3>
+  <p>De app Verkoop van JPHsystems verzamelt, bewaart of deelt <strong>geen enkele persoonlijke gegevens</strong>. Er zijn geen accounts, geen analyticssdk's, geen reclame en geen trackers van derden. Alles wat je invult (prijzen, percentages, taalkeuze) wordt uitsluitend lokaal in de app bewaard (UserDefaults op je eigen toestel) en verlaat je toestel nooit. Het deelrapport maak je zelf aan en deel je alleen als je zelf kiest te delen via het systeemdeelvenster. De app bevat geen aankopen en vraagt geen toegang tot camera, microfoon, locatie of contacten. Verwijderen van de app verwijdert ook alle bewaarde gegevens.</p>
+
+  <h3 style="margin-top:14px">Français</h3>
+  <p>L'app Vente de JPHsystems ne collecte, ne conserve ni ne partage <strong>aucune donnée personnelle</strong>. Pas de compte, pas de SDK d'analyse, pas de publicité, pas de traqueurs tiers. Tout ce que vous saisissez (prix, pourcentages, langue) reste stocké localement sur votre appareil et ne le quitte jamais. Le rapport partagé est créé par vous et ne part que si vous choisissez vous-même de le partager. L'app ne contient aucun achat et ne demande aucun accès à l'appareil photo, au micro, à la localisation ou aux contacts. Supprimer l'app supprime toutes les données.</p>
+
+  <h3 style="margin-top:14px">English</h3>
+  <p>The Verkoop app by JPHsystems does <strong>not collect, store or share any personal data</strong>. There are no accounts, no analytics SDKs, no advertising and no third-party trackers. Everything you enter (prices, percentages, language choice) is stored only locally on your own device and never leaves it. The share report is created by you and only goes anywhere if you choose to share it yourself. The app contains no purchases and requests no access to camera, microphone, location or contacts. Deleting the app removes all stored data.</p>
+</div>
+</section>
+
+<section id="changelog">
+<div class="card">
+  <h2>Changelog</h2>
+  <p><strong>1.5.0</strong> — App Store-release: Nederlandstalige, Franstalige en Engelse interface met taalkeuze en vlaggen, voorbeeldgegevens, reset per sectie, deelrapport met grafieken, ondersteuning voor iPhone, iPad en iPhone Duo.</p>
+</div>
+</section>
+
+</main>
+
+<footer class="flagline">
+  <p><span class="flag" aria-hidden="true">🇧🇪</span><strong>JPHsystems © 2026</strong> — Verkoop is een onafhankelijke app en is geen fiscaal advies. Bronnen: vlaanderen.be, notaris.be, VLABEL-standpunt 26021.</p>
+  <p style="margin-top:6px"><a href="https://github.com/jphermans/Verkoop-Support/issues">Ondersteuning / Support / Assistance</a> · <a href="#privacy">Privacy</a> · <a href="#top">↑</a></p>
+</footer>
+
+</div>
+</body>
+</html>
