@@ -572,7 +572,8 @@ footer .cols{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
   function setLang(l, save) {
     document.documentElement.lang = l;
     document.title = titles[l];
-    document.querySelectorAll("[data-lang]").forEach(function (el) {
+    // Alleen de inhoudssecties verbergen; de taalbuttons in de kop blijven altijd zichtbaar.
+    document.querySelectorAll("section[data-lang]").forEach(function (el) {
       el.classList.toggle("hidden", el.getAttribute("data-lang") !== l);
     });
     document.querySelectorAll(".lang-nl, .lang-fr, .lang-en").forEach(function (el) {
